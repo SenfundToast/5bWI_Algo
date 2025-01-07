@@ -4,6 +4,7 @@ import java.util.Random;
 
 //int bedeutet rückgabewert/typ
 //int (parameter)
+
 public class DataGenerator {
     public static int[] generateDataArray(int size) {
         Random random = new Random();
@@ -24,6 +25,7 @@ public class DataGenerator {
     }
 
     //data sind ganze zahlen in einem array
+    //muss in einem bestimmten bereich liegen
     public static void printArray(int[] data) {
         for (int i = 0; i < data.length; i++) {
             System.out.println(data[i]);
