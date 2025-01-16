@@ -13,6 +13,7 @@ public class Interface {
             System.out.println("1 - Choose a sorting algorithm");
             System.out.println("2 - Execute a sorting operation");
             System.out.println("3 - Create random list of length n");
+            System.out.println("4 - Exit program");
             
             int choice = scanner.nextInt();
             switch (choice) {
@@ -25,7 +26,13 @@ public class Interface {
                 case 3:
                     System.out.println("Enter length:");
                     int length = scanner.nextInt();
-                    System.out.println("Create random list (not implemented yet)");
+                    arrayToSort = DataGenerator.generateDataArray(length, 1, 1000);
+                    System.out.println("Created new random list:");
+                    DataGenerator.printArray(arrayToSort);
+                    break;
+                case 4:
+                    System.out.println("Exiting program...");
+                    isGoing = false;
                     break;
                 default:
                     System.out.println("Invalid option!");
